@@ -1,0 +1,3 @@
+org/elasticsearch/ingest/XMLProcessor.class
+org/elasticsearch/ingest/XMLProcessor$Factory.class
+org/elasticsearch/ingest/xmlingestorPlugin.class

@@ -17,7 +17,7 @@
 		</license>
 	</licenses>
 	<properties>
-		<elasticsearch.version>6.6.1</elasticsearch.version>
+		<elasticsearch.version>7.12.1</elasticsearch.version>
 		<elasticsearch.plugin.classname>org.elasticsearch.ingest.xmlingestorPlugin</elasticsearch.plugin.classname>
 		<log4j.version>2.11.1</log4j.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -74,6 +74,24 @@
 					</execution>
 				</executions>
 			</plugin>
+                        <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<executions>
+				  <execution>
+				    <id>enforce</id>
+				    <configuration>
+				      <rules>
+					<dependencyConvergence/>
+				      </rules>
+				    </configuration>
+				    <goals>
+				      <goal>enforce</goal>
+				    </goals>
+				  </execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -88,6 +106,13 @@
 			<artifactId>log4j-api</artifactId>
 			<version>${log4j.version}</version>
 			<scope>provided</scope>
+		</dependency>
+                <!--========================== For XML to JSON =======================================  -->
+                <!--  from Maven Central  see https://search.maven.org/artifact/org.json/json -->
+                <dependency>
+		        <groupId>org.json</groupId>
+		        <artifactId>json</artifactId>
+		        <version>20210307</version>
 		</dependency>
 	</dependencies>
 </project>
