@@ -39,7 +39,7 @@
 				<version>2.22.1</version>
 				<configuration>
 					<includes>
-						<include>**/*Tests.java</include>
+						<include>**/Test*.java</include>
 					</includes>
 				</configuration>
 			</plugin>
@@ -113,6 +113,32 @@
 		        <groupId>edu.stanford.nlp</groupId>
 		        <artifactId>stanford-corenlp</artifactId>
 		        <version>4.2.2</version>
+                        <exclusions>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-core</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-sandbox</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-queryparser</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-queries</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-analyzers-common</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>joda-time</groupId>
+		                     <artifactId>joda-time</artifactId>
+                               </exclusion>
+                        </exclusions>
                 </dependency>
                 <!--  ======================== For words hyphenator =============================== -->
                 <!--  from Maven Central  see https://search.maven.org/artifact/com.itextpdf/layout -->
@@ -182,5 +208,36 @@
 		       <url>https://jitpack.io</url>
 		</repository>
 	</repositories>
+
+        <!-- pin versions of some (transitive dependencies) libraries -->
+        <dependencyManagement>
+               <dependencies>
+                        <dependency>
+				<groupId>xml-apis</groupId>
+				<artifactId>xml-apis</artifactId>
+				<version>1.3.03</version>
+			</dependency>
+                        <dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.30</version>
+			</dependency>
+                        <dependency>
+				<groupId>javax.xml.bind</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>2.3.1</version>
+			</dependency>
+                        <dependency>
+				<groupId>com.sun.xml.bind</groupId>
+				<artifactId>jaxb-core</artifactId>
+				<version>3.0.1</version>
+			</dependency>
+                        <dependency>
+				<groupId>com.sun.xml.bind</groupId>
+				<artifactId>jaxb-impl</artifactId>
+				<version>3.0.1</version>
+			</dependency>
+               </dependencies>
+        </dependencyManagement>
 
 </project>
