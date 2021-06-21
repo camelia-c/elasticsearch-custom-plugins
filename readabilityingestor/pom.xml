@@ -17,7 +17,7 @@
 		</license>
 	</licenses>
 	<properties>
-		<elasticsearch.version>6.6.1</elasticsearch.version>
+		<elasticsearch.version>7.12.1</elasticsearch.version>
 		<elasticsearch.plugin.classname>org.elasticsearch.ingest.readabilityingestorPlugin</elasticsearch.plugin.classname>
 		<log4j.version>2.11.1</log4j.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -74,6 +74,24 @@
 					</execution>
 				</executions>
 			</plugin>
+                        <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<executions>
+				  <execution>
+				    <id>enforce</id>
+				    <configuration>
+				      <rules>
+					<dependencyConvergence/>
+				      </rules>
+				    </configuration>
+				    <goals>
+				      <goal>enforce</goal>
+				    </goals>
+				  </execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -89,5 +107,80 @@
 			<version>${log4j.version}</version>
 			<scope>provided</scope>
 		</dependency>
+                <!--  =========== For sentence delimitation and tokenization ===================== -->
+                <!--  from Maven local repo, see https://github.com/camelia-c/CoreNLP/blob/no_setIO_Redwood/README_prevent_setIO.md -->
+                <dependency>
+		        <groupId>edu.stanford.nlp</groupId>
+		        <artifactId>stanford-corenlp</artifactId>
+		        <version>4.2.2</version>
+                </dependency>
+                <!--  ======================== For words hyphenator =============================== -->
+                <!--  from Maven Central  see https://search.maven.org/artifact/com.itextpdf/layout -->
+                <dependency>
+		        <groupId>com.itextpdf</groupId>
+		        <artifactId>hyph</artifactId>
+		        <version>7.1.15</version>
+		</dependency>
+                <dependency>
+		        <groupId>com.itextpdf</groupId>
+		        <artifactId>layout</artifactId>
+		        <version>7.1.15</version>
+		</dependency> 
+                <!-- from Jitpack https://jitpack.io/#mfietz/JHyphenator/master -->
+                <dependency>
+		        <groupId>com.github.mfietz</groupId>
+		        <artifactId>JHyphenator</artifactId>
+		        <version>master</version>
+		</dependency>              
+                <!--  ======================== For JSON serialization ============================== -->
+                <!--  from Maven Central  see https://search.maven.org/artifact/com.google.code.gson/gson -->
+	        <dependency>
+		        <groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.7</version>
+	        </dependency>   
+                <!-- ======================== For testing =========================================== -->
+                <!-- see https://search.maven.org/artifact/junit/junit/4.13.2/jar -->
+                <dependency>
+		        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                        <version>4.12</version>
+		        <scope>test</scope>
+		</dependency>
+                <!-- see https://assertj.github.io/doc/#assertj-core-quick-start -->
+		<dependency>
+		        <groupId>org.assertj</groupId>
+		        <artifactId>assertj-core</artifactId>
+		        <version>3.20.2</version>
+		        <scope>test</scope>
+		</dependency>
+                <!-- https://search.maven.org/artifact/pl.pragmatists/JUnitParams -->
+                <dependency>
+		        <groupId>pl.pragmatists</groupId>
+                        <artifactId>JUnitParams</artifactId>
+                        <version>1.1.1</version>
+		        <scope>test</scope>
+		</dependency>
 	</dependencies>
+
+        <!-- the order matters in repositories-->
+       <repositories>
+                <repository>
+		       <id>my_local</id>
+		       <url>file:///home/camelia/.m2/repository</url>
+		</repository>
+                <repository>
+		       <id>maven_central</id>
+		       <url>https://repo.maven.apache.org/maven2</url>
+                       <layout>default</layout>
+		       <snapshots>
+		            <enabled>false</enabled>
+		       </snapshots>
+		</repository>
+                <repository>
+		       <id>jitpack.io</id>
+		       <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
 </project>
