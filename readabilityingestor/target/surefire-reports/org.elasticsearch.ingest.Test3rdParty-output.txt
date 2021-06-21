@@ -1,0 +1,88 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+========= PARSING WITH CORENLP ===============
+TEXT: Elasticsearch is a search engine based on the Lucene library.
+Elasticsearch	0	13
+is	14	16
+a	17	18
+search	19	25
+engine	26	32
+based	33	38
+on	39	41
+the	42	45
+Lucene	46	52
+library	53	60
+.	60	61
+numSentences=1	numWords=10
+========= PARSING WITH CORENLP ===============
+TEXT: Elasticsearch can be used to search all kinds of documents. It provides scalable search, has near real-time search, and supports multitenancy.
+Elasticsearch	0	13
+can	14	17
+be	18	20
+used	21	25
+to	26	28
+search	29	35
+all	36	39
+kinds	40	45
+of	46	48
+documents	49	58
+.	58	59
+It	60	62
+provides	63	71
+scalable	72	80
+search	81	87
+,	87	88
+has	89	92
+near	93	97
+real-time	98	107
+search	108	114
+,	114	115
+and	116	119
+supports	120	128
+multitenancy	129	141
+.	141	142
+numSentences=2	numWords=21
+========= HYPHEN TEST ITEXT7 ===============
+Elasticsearch	Elast-ic-search	3
+========= HYPHEN TEST ITEXT7 ===============
+Catched exception:   java.lang.NullPointerException
+is	n/a	1
+========= HYPHEN TEST ITEXT7 ===============
+Catched exception:   java.lang.NullPointerException
+search	n/a	1
+========= HYPHEN TEST ITEXT7 ===============
+engine	en-gine	2
+========= HYPHEN TEST ITEXT7 ===============
+Lucene	Lu-cene	2
+========= HYPHEN TEST ITEXT7 ===============
+library	lib-rary	2
+========= HYPHEN TEST ITEXT7 ===============
+documents	doc-u-ments	3
+========= HYPHEN TEST ITEXT7 ===============
+real-time	real-time	1
+========= HYPHEN TEST ITEXT7 ===============
+multitenancy	mul-ti-ten-ancy	4
+========= HYPHEN TEST ITEXT7 ===============
+Catched exception:   java.lang.NullPointerException
+today	n/a	1
+========= HYPHEN TEST JHYPHENATOR ===============
+Elasticsearch	Elas-tic-search	3
+========= HYPHEN TEST JHYPHENATOR ===============
+is	is	1
+========= HYPHEN TEST JHYPHENATOR ===============
+search	search	1
+========= HYPHEN TEST JHYPHENATOR ===============
+engine	en-gine	2
+========= HYPHEN TEST JHYPHENATOR ===============
+Lucene	Lucene	1
+========= HYPHEN TEST JHYPHENATOR ===============
+library	li-brary	2
+========= HYPHEN TEST JHYPHENATOR ===============
+documents	doc-u-ments	3
+========= HYPHEN TEST JHYPHENATOR ===============
+real-time	re-al--time	3
+========= HYPHEN TEST JHYPHENATOR ===============
+multitenancy	mul-ti-te-nancy	4
+========= HYPHEN TEST JHYPHENATOR ===============
+today	to-day	2

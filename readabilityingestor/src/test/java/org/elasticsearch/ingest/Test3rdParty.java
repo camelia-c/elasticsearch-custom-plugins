@@ -67,7 +67,7 @@ public class Test3rdParty {
       "library, 2",
       "documents, 3",
       "real-time, 3",
-      "multitenancy, 3",
+      "multitenancy, 4",
       "today, 2"
     })  
     public void testHyphenV1(String word, int expected) { 
@@ -101,7 +101,7 @@ public class Test3rdParty {
       "library, 2",
       "documents, 3",
       "real-time, 3",
-      "multitenancy, 3",
+      "multitenancy, 4",
       "today, 2"
     })  
     public void testHyphenV2(String word, int expected) { 
@@ -166,6 +166,7 @@ public class Test3rdParty {
 
     
     private Object[] generateValues() {
+        //source of texts: https://en.wikipedia.org/wiki/Elasticsearch
 	return new Object[]{
 	         new Object[]{"Elasticsearch is a search engine based on the Lucene library.", 1,10},
 	         new Object[]{"Elasticsearch can be used to search all kinds of documents. It provides scalable search, has near real-time search, and supports multitenancy.", 2, 21}
