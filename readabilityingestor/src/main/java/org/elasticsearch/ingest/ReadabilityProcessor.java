@@ -5,6 +5,10 @@ import org.elasticsearch.ingest.IngestDocument;
 import org.elasticsearch.ingest.Processor;
 import org.elasticsearch.ingest.ConfigurationUtils;
 
+import org.elasticsearch.SpecialPermission;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
+
 import java.util.Collections;
 import java.util.Map;
 import com.google.gson.Gson;
@@ -16,12 +20,20 @@ public final class ReadabilityProcessor extends AbstractProcessor {
     //The param we accept as input along with the document
     private String srcField;
 
+    private SecurityManager sec;
+
     ReadabilityMetrics readmetrics;
 
     public ReadabilityProcessor(String tag, String description, String srcField) {
         super(tag, description);
         this.srcField = srcField;
         this.readmetrics = new ReadabilityMetrics();
+
+        this.sec = System.getSecurityManager();
+        if (this.sec != null) {
+	    //silently passses if permission is granted
+	    this.sec.checkPermission(new SpecialPermission());
+	}
     }
 
 
@@ -41,10 +53,18 @@ public final class ReadabilityProcessor extends AbstractProcessor {
 
             Map<String, Float> metrics = this.readmetrics.computeMetrics(initialValue);
 
-            Gson gson = new Gson(); 
-            String jsonStr = gson.toJson(metrics); 
+            //gson requires priviledged mode to be used in ES plugin
+            AccessController.doPrivileged(new PrivilegedAction<Void>() {
 
-            inputDoc.setFieldValue("_readability", jsonStr);           
+                public Void run() {
+                     Gson gson = new Gson(); 
+                     String jsonStr = gson.toJson(metrics); 
+
+                     inputDoc.setFieldValue("_readability", jsonStr);   
+
+                     return null; // nothing to return
+                }
+            });        
 
         }
         return inputDoc;
