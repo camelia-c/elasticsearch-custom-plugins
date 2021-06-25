@@ -51,7 +51,7 @@ public final class ReadabilityProcessor extends AbstractProcessor {
         if (inputDoc.hasField(srcField)) {
             String initialValue = inputDoc.getFieldValue(this.srcField, String.class);
 
-            Map<String, Float> metrics = this.readmetrics.computeMetrics(initialValue);
+            MetricsResult metrics = this.readmetrics.end2endProcessing(initialValue);
 
             //gson requires priviledged mode to be used in ES plugin
             AccessController.doPrivileged(new PrivilegedAction<Void>() {

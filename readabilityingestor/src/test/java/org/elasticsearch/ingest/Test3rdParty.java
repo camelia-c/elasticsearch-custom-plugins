@@ -47,9 +47,11 @@ public class Test3rdParty {
         RedwoodConfiguration.empty2();    
 
         Properties props = new Properties();
-        // set the list of annotators to run - tokenizer and sentences splits
-        props.setProperty("annotators", "tokenize,ssplit");
+        // set the list of annotators to run - tokenizer and sentences splits don't require models
+        props.setProperty("annotators", "tokenize,ssplit,pos,lemma"); 
         props.setProperty("tokenize.options", "splitHyphenated=false,americanize=false");
+        //pos tagger needs model (15 MB) from https://nlp.stanford.edu/software/tagger.shtml#Download stored in resources folder
+        props.setProperty("pos.model", "english-left3words-distsim.tagger");        
 
         // build pipeline
         pipeline = new StanfordCoreNLP(props);
@@ -121,7 +123,6 @@ public class Test3rdParty {
              System.out.println(String.format("%s\t%s\t%d", word, sylStr, auxNumSylToken));
         }
         catch(Exception e){
-             //for monosyllabic words itext7 hyphen returns null
              System.out.println("Catched exception:   " + e);
              auxNumSylToken = 1;
              System.out.println(String.format("%s\t%s\t%d", word, "n/a", auxNumSylToken));
@@ -148,7 +149,7 @@ public class Test3rdParty {
         pipeline.annotate(doc);
 
         for (CoreLabel tok : doc.tokens()) {
-            System.out.println(String.format("%s\t%d\t%d", tok.word(), tok.beginPosition(), tok.endPosition()));
+            System.out.println(String.format("%s\t%s\t(%d : %d)", tok.word(),  tok.tag(), tok.beginPosition(), tok.endPosition())); 
         }
 
         int numSentences = doc.sentences().size();

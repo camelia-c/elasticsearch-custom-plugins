@@ -75,6 +75,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
                         <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
@@ -92,7 +93,8 @@
 				    </goals>
 				  </execution>
 				</executions>
-			</plugin>
+			</plugin>  
+
 		</plugins>
 	</build>
 	<dependencies>
@@ -141,6 +143,39 @@
                                </exclusion>
                         </exclusions>
                 </dependency>
+                <!-- the models are approx 400MB, so instead just use the needed onces as resource files -->
+                <!--<dependency>
+		        <groupId>edu.stanford.nlp</groupId>
+		        <artifactId>stanford-corenlp</artifactId>
+		        <version>4.2.2</version>
+                        <classifier>models</classifier>
+                        <exclusions>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-core</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-sandbox</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-queryparser</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-queries</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>org.apache.lucene</groupId>
+		                     <artifactId>lucene-analyzers-common</artifactId>
+                               </exclusion>
+                               <exclusion>
+                                     <groupId>joda-time</groupId>
+		                     <artifactId>joda-time</artifactId>
+                               </exclusion>
+                        </exclusions>
+                </dependency> -->
                 <!--  ======================== For words hyphenator =============================== -->
                 <!--  from Maven Central  see https://search.maven.org/artifact/com.itextpdf/layout -->
                 <dependency>

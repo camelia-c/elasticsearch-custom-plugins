@@ -3,45 +3,45 @@ SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ========= PARSING WITH CORENLP ===============
 TEXT: Elasticsearch is a search engine based on the Lucene library.
-Elasticsearch	0	13
-is	14	16
-a	17	18
-search	19	25
-engine	26	32
-based	33	38
-on	39	41
-the	42	45
-Lucene	46	52
-library	53	60
-.	60	61
+Elasticsearch	NNP	(0 : 13)
+is	VBZ	(14 : 16)
+a	DT	(17 : 18)
+search	NN	(19 : 25)
+engine	NN	(26 : 32)
+based	VBN	(33 : 38)
+on	IN	(39 : 41)
+the	DT	(42 : 45)
+Lucene	NNP	(46 : 52)
+library	NN	(53 : 60)
+.	.	(60 : 61)
 numSentences=1	numWords=10
 ========= PARSING WITH CORENLP ===============
 TEXT: Elasticsearch can be used to search all kinds of documents. It provides scalable search, has near real-time search, and supports multitenancy.
-Elasticsearch	0	13
-can	14	17
-be	18	20
-used	21	25
-to	26	28
-search	29	35
-all	36	39
-kinds	40	45
-of	46	48
-documents	49	58
-.	58	59
-It	60	62
-provides	63	71
-scalable	72	80
-search	81	87
-,	87	88
-has	89	92
-near	93	97
-real-time	98	107
-search	108	114
-,	114	115
-and	116	119
-supports	120	128
-multitenancy	129	141
-.	141	142
+Elasticsearch	NNP	(0 : 13)
+can	MD	(14 : 17)
+be	VB	(18 : 20)
+used	VBN	(21 : 25)
+to	TO	(26 : 28)
+search	VB	(29 : 35)
+all	DT	(36 : 39)
+kinds	NNS	(40 : 45)
+of	IN	(46 : 48)
+documents	NNS	(49 : 58)
+.	.	(58 : 59)
+It	PRP	(60 : 62)
+provides	VBZ	(63 : 71)
+scalable	JJ	(72 : 80)
+search	NN	(81 : 87)
+,	,	(87 : 88)
+has	VBZ	(89 : 92)
+near	IN	(93 : 97)
+real-time	JJ	(98 : 107)
+search	NN	(108 : 114)
+,	,	(114 : 115)
+and	CC	(116 : 119)
+supports	VBZ	(120 : 128)
+multitenancy	NN	(129 : 141)
+.	.	(141 : 142)
 numSentences=2	numWords=21
 ========= HYPHEN TEST ITEXT7 ===============
 Elasticsearch	Elast-ic-search	3
