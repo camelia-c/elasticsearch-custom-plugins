@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import static org.assertj.core.api.Assertions.*;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Assume;
 
 import edu.stanford.nlp.pipeline.*;
@@ -88,8 +89,12 @@ public class Test3rdParty {
              auxNumSylToken = 1;
              System.out.println(String.format("%s\t%s\t%d", word, "n/a", auxNumSylToken));
         }
-        //assume instead of assert , in order to ignore if these tests fail 
-        Assume.assumeTrue(auxNumSylToken == expected);
+        
+        //softassert to ignore failed assertions in a group of assertions
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(auxNumSylToken).as("SyllablesV1").isEqualTo(expected); 
+        softly.assertAll();
+ 
     }
 
 
@@ -127,8 +132,11 @@ public class Test3rdParty {
              auxNumSylToken = 1;
              System.out.println(String.format("%s\t%s\t%d", word, "n/a", auxNumSylToken));
         }
-        //assume instead of assert , in order to ignore if these tests fail 
-        Assume.assumeTrue(auxNumSylToken == expected);
+        
+        //softassert to ignore failed assertions in a group of assertions
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(auxNumSylToken).as("SyllablesV2").isEqualTo(expected); 
+        softly.assertAll();
     }
     
 
@@ -161,8 +169,12 @@ public class Test3rdParty {
 
         System.out.println(String.format("numSentences=%d\tnumWords=%d", numSentences, numWords));
         
-        assertThat(numSentences).isEqualTo(expectedNumSentences);
-        assertThat(numWords).isEqualTo(expectedNumTokens); 
+        //softassert to ignore failed assertions in a group of assertions
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(numSentences).as("numSentences").isEqualTo(expectedNumSentences); 
+        softly.assertThat(numWords).as("numWords").isEqualTo(expectedNumTokens); 
+        softly.assertAll();
+
     }
 
     

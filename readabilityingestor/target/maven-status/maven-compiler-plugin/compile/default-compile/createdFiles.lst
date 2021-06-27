@@ -1,0 +1,7 @@
+org/elasticsearch/ingest/ReadabilityProcessor$1.class
+org/elasticsearch/ingest/readabilityingestorPlugin.class
+org/elasticsearch/ingest/ReadabilityMetrics$1.class
+org/elasticsearch/ingest/ReadabilityProcessor.class
+org/elasticsearch/ingest/MetricsResult.class
+org/elasticsearch/ingest/ReadabilityMetrics.class
+org/elasticsearch/ingest/ReadabilityProcessor$Factory.class

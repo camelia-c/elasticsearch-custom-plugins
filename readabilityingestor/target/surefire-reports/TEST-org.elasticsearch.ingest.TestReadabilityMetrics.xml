@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.elasticsearch.ingest.TestReadabilityMetrics" time="24.806" tests="5" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/test-classes:/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/classes:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch/7.12.1/elasticsearch-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-core/7.12.1/elasticsearch-core-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-secure-sm/7.12.1/elasticsearch-secure-sm-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-x-content/7.12.1/elasticsearch-x-content-7.12.1.jar:/home/camelia/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.4/jackson-core-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.10.4/jackson-dataformat-smile-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.10.4/jackson-dataformat-yaml-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.10.4/jackson-dataformat-cbor-2.10.4.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-geo/7.12.1/elasticsearch-geo-7.12.1.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-core/8.8.0/lucene-core-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-analyzers-common/8.8.0/lucene-analyzers-common-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-backward-codecs/8.8.0/lucene-backward-codecs-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-grouping/8.8.0/lucene-grouping-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-highlighter/8.8.0/lucene-highlighter-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-join/8.8.0/lucene-join-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-memory/8.8.0/lucene-memory-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-misc/8.8.0/lucene-misc-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-queries/8.8.0/lucene-queries-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-queryparser/8.8.0/lucene-queryparser-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-sandbox/8.8.0/lucene-sandbox-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-spatial-extras/8.8.0/lucene-spatial-extras-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-spatial3d/8.8.0/lucene-spatial3d-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-suggest/8.8.0/lucene-suggest-8.8.0.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-cli/7.12.1/elasticsearch-cli-7.12.1.jar:/home/camelia/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.2/jopt-simple-5.0.2.jar:/home/camelia/.m2/repository/com/carrotsearch/hppc/0.8.1/hppc-0.8.1.jar:/home/camelia/.m2/repository/joda-time/joda-time/2.10.4/joda-time-2.10.4.jar:/home/camelia/.m2/repository/com/tdunning/t-digest/3.2/t-digest-3.2.jar:/home/camelia/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar:/home/camelia/.m2/repository/org/elasticsearch/jna/5.7.0-1/jna-5.7.0-1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-plugin-classloader/7.12.1/elasticsearch-plugin-classloader-7.12.1.jar:/home/camelia/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.1/log4j-api-2.11.1.jar:/home/camelia/.m2/repository/edu/stanford/nlp/stanford-corenlp/4.2.2/stanford-corenlp-4.2.2.jar:/home/camelia/.m2/repository/com/apple/AppleJavaExtensions/1.4/AppleJavaExtensions-1.4.jar:/home/camelia/.m2/repository/de/jollyday/jollyday/0.4.9/jollyday-0.4.9.jar:/home/camelia/.m2/repository/org/apache/commons/commons-lang3/3.3.1/commons-lang3-3.3.1.jar:/home/camelia/.m2/repository/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar:/home/camelia/.m2/repository/xom/xom/1.3.2/xom-1.3.2.jar:/home/camelia/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar:/home/camelia/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar:/home/camelia/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar:/home/camelia/.m2/repository/org/ejml/ejml-core/0.39/ejml-core-0.39.jar:/home/camelia/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/camelia/.m2/repository/org/ejml/ejml-ddense/0.39/ejml-ddense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-simple/0.39/ejml-simple-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-fdense/0.39/ejml-fdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-cdense/0.39/ejml-cdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-zdense/0.39/ejml-zdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-dsparse/0.39/ejml-dsparse-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-fsparse/0.39/ejml-fsparse-0.39.jar:/home/camelia/.m2/repository/org/glassfish/javax.json/1.0.4/javax.json-1.0.4.jar:/home/camelia/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/camelia/.m2/repository/com/google/protobuf/protobuf-java/3.9.2/protobuf-java-3.9.2.jar:/home/camelia/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/camelia/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/camelia/.m2/repository/com/sun/xml/bind/jaxb-core/3.0.1/jaxb-core-3.0.1.jar:/home/camelia/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.1/jakarta.xml.bind-api-3.0.1.jar:/home/camelia/.m2/repository/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1.jar:/home/camelia/.m2/repository/com/sun/xml/bind/jaxb-impl/3.0.1/jaxb-impl-3.0.1.jar:/home/camelia/.m2/repository/com/itextpdf/hyph/7.1.15/hyph-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/layout/7.1.15/layout-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/kernel/7.1.15/kernel-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/io/7.1.15/io-7.1.15.jar:/home/camelia/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.68/bcpkix-jdk15on-1.68.jar:/home/camelia/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.68/bcprov-jdk15on-1.68.jar:/home/camelia/.m2/repository/com/github/mfietz/JHyphenator/master/JHyphenator-master.jar:/home/camelia/.m2/repository/com/google/code/gson/gson/2.8.7/gson-2.8.7.jar:/home/camelia/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/camelia/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/camelia/.m2/repository/org/assertj/assertj-core/3.20.2/assertj-core-3.20.2.jar:/home/camelia/.m2/repository/pl/pragmatists/JUnitParams/1.1.1/JUnitParams-1.1.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire/surefirebooter786078369010571747.jar /home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire 2021-06-27T12-48-29_050-jvmRun1 surefire1894606883078819513tmp surefire_0702460935217070781tmp"/>
+    <property name="surefire.test.class.path" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/test-classes:/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/classes:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch/7.12.1/elasticsearch-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-core/7.12.1/elasticsearch-core-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-secure-sm/7.12.1/elasticsearch-secure-sm-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-x-content/7.12.1/elasticsearch-x-content-7.12.1.jar:/home/camelia/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.4/jackson-core-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.10.4/jackson-dataformat-smile-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.10.4/jackson-dataformat-yaml-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.10.4/jackson-dataformat-cbor-2.10.4.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-geo/7.12.1/elasticsearch-geo-7.12.1.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-core/8.8.0/lucene-core-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-analyzers-common/8.8.0/lucene-analyzers-common-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-backward-codecs/8.8.0/lucene-backward-codecs-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-grouping/8.8.0/lucene-grouping-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-highlighter/8.8.0/lucene-highlighter-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-join/8.8.0/lucene-join-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-memory/8.8.0/lucene-memory-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-misc/8.8.0/lucene-misc-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-queries/8.8.0/lucene-queries-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-queryparser/8.8.0/lucene-queryparser-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-sandbox/8.8.0/lucene-sandbox-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-spatial-extras/8.8.0/lucene-spatial-extras-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-spatial3d/8.8.0/lucene-spatial3d-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-suggest/8.8.0/lucene-suggest-8.8.0.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-cli/7.12.1/elasticsearch-cli-7.12.1.jar:/home/camelia/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.2/jopt-simple-5.0.2.jar:/home/camelia/.m2/repository/com/carrotsearch/hppc/0.8.1/hppc-0.8.1.jar:/home/camelia/.m2/repository/joda-time/joda-time/2.10.4/joda-time-2.10.4.jar:/home/camelia/.m2/repository/com/tdunning/t-digest/3.2/t-digest-3.2.jar:/home/camelia/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar:/home/camelia/.m2/repository/org/elasticsearch/jna/5.7.0-1/jna-5.7.0-1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-plugin-classloader/7.12.1/elasticsearch-plugin-classloader-7.12.1.jar:/home/camelia/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.1/log4j-api-2.11.1.jar:/home/camelia/.m2/repository/edu/stanford/nlp/stanford-corenlp/4.2.2/stanford-corenlp-4.2.2.jar:/home/camelia/.m2/repository/com/apple/AppleJavaExtensions/1.4/AppleJavaExtensions-1.4.jar:/home/camelia/.m2/repository/de/jollyday/jollyday/0.4.9/jollyday-0.4.9.jar:/home/camelia/.m2/repository/org/apache/commons/commons-lang3/3.3.1/commons-lang3-3.3.1.jar:/home/camelia/.m2/repository/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar:/home/camelia/.m2/repository/xom/xom/1.3.2/xom-1.3.2.jar:/home/camelia/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar:/home/camelia/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar:/home/camelia/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar:/home/camelia/.m2/repository/org/ejml/ejml-core/0.39/ejml-core-0.39.jar:/home/camelia/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/camelia/.m2/repository/org/ejml/ejml-ddense/0.39/ejml-ddense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-simple/0.39/ejml-simple-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-fdense/0.39/ejml-fdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-cdense/0.39/ejml-cdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-zdense/0.39/ejml-zdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-dsparse/0.39/ejml-dsparse-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-fsparse/0.39/ejml-fsparse-0.39.jar:/home/camelia/.m2/repository/org/glassfish/javax.json/1.0.4/javax.json-1.0.4.jar:/home/camelia/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/camelia/.m2/repository/com/google/protobuf/protobuf-java/3.9.2/protobuf-java-3.9.2.jar:/home/camelia/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/camelia/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/camelia/.m2/repository/com/sun/xml/bind/jaxb-core/3.0.1/jaxb-core-3.0.1.jar:/home/camelia/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.1/jakarta.xml.bind-api-3.0.1.jar:/home/camelia/.m2/repository/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1.jar:/home/camelia/.m2/repository/com/sun/xml/bind/jaxb-impl/3.0.1/jaxb-impl-3.0.1.jar:/home/camelia/.m2/repository/com/itextpdf/hyph/7.1.15/hyph-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/layout/7.1.15/layout-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/kernel/7.1.15/kernel-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/io/7.1.15/io-7.1.15.jar:/home/camelia/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.68/bcpkix-jdk15on-1.68.jar:/home/camelia/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.68/bcprov-jdk15on-1.68.jar:/home/camelia/.m2/repository/com/github/mfietz/JHyphenator/master/JHyphenator-master.jar:/home/camelia/.m2/repository/com/google/code/gson/gson/2.8.7/gson-2.8.7.jar:/home/camelia/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/camelia/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/camelia/.m2/repository/org/assertj/assertj-core/3.20.2/assertj-core-3.20.2.jar:/home/camelia/.m2/repository/pl/pragmatists/JUnitParams/1.1.1/JUnitParams-1.1.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/camelia"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
+    <property name="basedir" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire/surefirebooter786078369010571747.jar"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_101-b13"/>
+    <property name="user.name" value="camelia"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="4.4.0-210-generic"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/camelia/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_101"/>
+    <property name="user.dir" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.101-b13"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testMetrics({txt=Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Elasticsearch is where the indexing, search, and analysis magic happens. It provides scalable search, has near real-time search, and supports multitenancy. Elasticsearch provides near real-time search and analytics for all types of data. Whether you have structured or unstructured text, numerical data, or geospatial data, Elasticsearch can efficiently store and index it in a way that supports fast searches. You can go far beyond simple data retrieval and aggregate information to discover trends and patterns in your data., numSyllables=167, numSentences=6, SMOG=13.55, FK=11.64, ARI=12.5, FRE=39.18, CL=14.97, numWords=93, numBasicWords=55, DC=10.85}) [0]" classname="org.elasticsearch.ingest.TestReadabilityMetrics" time="17.876">
+    <failure message="&#10;The following 7 assertions failed:&#10;1) [numSyllables] expected:&lt;1[6]7&gt; but was:&lt;1[4]7&gt;&#10;2) [numBasicWords] expected:&lt;5[5]&gt; but was:&lt;5[4]&gt;&#10;3) [SMOG] expected:&lt;1[3.55]f&gt; but was:&lt;1[2.46]f&gt;&#10;4) [FK] expected:&lt;[11.64]f&gt; but was:&lt;[9.11]f&gt;&#10;5) [FRE] expected:&lt;[39.1]8f&gt; but was:&lt;[57.3]8f&gt;&#10;6) [CL] expected:&lt;1[4.97]f&gt; but was:&lt;1[8.8]f&gt;&#10;7) [DC] expected:&lt;1[0.85]f&gt; but was:&lt;1[1.03]f&gt;&#10;" type="org.assertj.core.api.SoftAssertionError"><![CDATA[org.assertj.core.api.SoftAssertionError: 
+
+The following 7 assertions failed:
+1) [numSyllables] expected:<1[6]7> but was:<1[4]7>
+2) [numBasicWords] expected:<5[5]> but was:<5[4]>
+3) [SMOG] expected:<1[3.55]f> but was:<1[2.46]f>
+4) [FK] expected:<[11.64]f> but was:<[9.11]f>
+5) [FRE] expected:<[39.1]8f> but was:<[57.3]8f>
+6) [CL] expected:<1[4.97]f> but was:<1[8.8]f>
+7) [DC] expected:<1[0.85]f> but was:<1[1.03]f>
+
+	at org.elasticsearch.ingest.TestReadabilityMetrics.testMetrics(TestReadabilityMetrics.java:72)
+]]></failure>
+    <system-out><![CDATA[========= METRICS TEST ===============
+Expected:
+TEXT:Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Elasticsearch is where the indexing, search, and analysis magic happens. It provides scalable search, has near real-time search, and supports multitenancy. Elasticsearch provides near real-time search and analytics for all types of data. Whether you have structured or unstructured text, numerical data, or geospatial data, Elasticsearch can efficiently store and index it in a way that supports fast searches. You can go far beyond simple data retrieval and aggregate information to discover trends and patterns in your data.
+Sent:6	Word:93	uniqW:0	basicW:55	polysylW:0	Syl:167	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:0
+SMOG:13.55	FK:11.64	ARI:12.5	FRE:39.18	CL:14.97	DC:10.85	
+-----------------------------------------------------------------
+
+Computed:
+TEXT:Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Elasticsearch is where the indexing, search, and analysis magic happens. It provides scalable search, has near real-time search, and supports multitenancy. Elasticsearch provides near real-time search and analytics for all types of data. Whether you have structured or unstructured text, numerical data, or geospatial data, Elasticsearch can efficiently store and index it in a way that supports fast searches. You can go far beyond simple data retrieval and aggregate information to discover trends and patterns in your data.
+Sent:6	Word:93	uniqW:58	basicW:54	polysylW:16	Syl:147	Lett:517	Char:622
+Nouns:34	Prons:5	Vbs:11	VbsPart:2	Mods:2	Adj:9	Advs:3	Preps:19	Pcts:13
+SMOG:12.457975	FK:9.106613	ARI:12.503548	FRE:57.379917	CL:18.797419	DC:11.026913	
+-----------------------------------------------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="testMetrics({txt=Readability is the ease with which a reader can understand a written text. In natural language, the readability of text depends on its content [the complexity of its vocabulary and syntax] and its presentation [such as typographic aspects that affect legibility, like font size, line height, character spacing, and line length]., numSyllables=91, numSentences=2, SMOG=15.9, FK=15.4, ARI=15.97, FRE=29.99, CL=13.82, numWords=51, numBasicWords=34, DC=10.16}) [1]" classname="org.elasticsearch.ingest.TestReadabilityMetrics" time="0.06">
+    <failure message="&#10;The following 8 assertions failed:&#10;1) [numSyllables] expected:&lt;[9]1&gt; but was:&lt;[8]1&gt;&#10;2) [numBasicWords] expected:&lt;3[4]&gt; but was:&lt;3[3]&gt;&#10;3) [SMOG] expected:&lt;15.[9]f&gt; but was:&lt;15.[25]f&gt;&#10;4) [FK] expected:&lt;1[5.4]f&gt; but was:&lt;1[3.1]f&gt;&#10;5) [ARI] expected:&lt;15.9[7]f&gt; but was:&lt;15.9[8]f&gt;&#10;6) [FRE] expected:&lt;[29.9]9f&gt; but was:&lt;[46.5]9f&gt;&#10;7) [CL] expected:&lt;1[3.82]f&gt; but was:&lt;1[6.14]f&gt;&#10;8) [DC] expected:&lt;10.[16]f&gt; but was:&lt;10.[47]f&gt;&#10;" type="org.assertj.core.api.SoftAssertionError"><![CDATA[org.assertj.core.api.SoftAssertionError: 
+
+The following 8 assertions failed:
+1) [numSyllables] expected:<[9]1> but was:<[8]1>
+2) [numBasicWords] expected:<3[4]> but was:<3[3]>
+3) [SMOG] expected:<15.[9]f> but was:<15.[25]f>
+4) [FK] expected:<1[5.4]f> but was:<1[3.1]f>
+5) [ARI] expected:<15.9[7]f> but was:<15.9[8]f>
+6) [FRE] expected:<[29.9]9f> but was:<[46.5]9f>
+7) [CL] expected:<1[3.82]f> but was:<1[6.14]f>
+8) [DC] expected:<10.[16]f> but was:<10.[47]f>
+
+	at org.elasticsearch.ingest.TestReadabilityMetrics.testMetrics(TestReadabilityMetrics.java:72)
+]]></failure>
+    <system-out><![CDATA[========= METRICS TEST ===============
+Expected:
+TEXT:Readability is the ease with which a reader can understand a written text. In natural language, the readability of text depends on its content (the complexity of its vocabulary and syntax) and its presentation (such as typographic aspects that affect legibility, like font size, line height, character spacing, and line length).
+Sent:2	Word:51	uniqW:0	basicW:34	polysylW:0	Syl:91	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:0
+SMOG:15.9	FK:15.4	ARI:15.97	FRE:29.99	CL:13.82	DC:10.16	
+-----------------------------------------------------------------
+
+Computed:
+TEXT:Readability is the ease with which a reader can understand a written text. In natural language, the readability of text depends on its content (the complexity of its vocabulary and syntax) and its presentation (such as typographic aspects that affect legibility, like font size, line height, character spacing, and line length).
+Sent:2	Word:51	uniqW:40	basicW:33	polysylW:9	Syl:81	Lett:267	Char:328
+Nouns:22	Prons:3	Vbs:4	VbsPart:1	Mods:1	Adj:3	Advs:0	Preps:10	Pcts:11
+SMOG:15.247664	FK:13.096176	ARI:15.978236	FRE:46.587795	CL:16.144316	DC:10.474241	
+-----------------------------------------------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="testMetrics({txt=A smart city is an urban area that uses different types of electronic methods and sensors to collect data. Insights gained from that data are used to manage assets, resources and services efficiently; in return, that data is used to improve the operations across the city. This includes data collected from citizens, devices, buildings and assets that is then processed and analyzed to monitor and manage traffic and transportation systems, power plants, utilities, water supply networks, waste, crime detection, information systems, schools, libraries, hospitals, and other community services., numSyllables=165, numSentences=3, SMOG=17.87, FK=17.97, ARI=19.4, FRE=18.43, CL=15.86, numWords=88, numBasicWords=52, DC=11.55}) [2]" classname="org.elasticsearch.ingest.TestReadabilityMetrics" time="0.037">
+    <failure message="&#10;The following 6 assertions failed:&#10;1) [numSyllables] expected:&lt;1[65]&gt; but was:&lt;1[40]&gt;&#10;2) [SMOG] expected:&lt;1[7.87]f&gt; but was:&lt;1[4.55]f&gt;&#10;3) [FK] expected:&lt;1[7.97]f&gt; but was:&lt;1[4.62]f&gt;&#10;4) [ARI] expected:&lt;19.4[]f&gt; but was:&lt;19.4[1]f&gt;&#10;5) [FRE] expected:&lt;[18.43]f&gt; but was:&lt;[42.47]f&gt;&#10;6) [CL] expected:&lt;1[5.86]f&gt; but was:&lt;1[7.88]f&gt;&#10;" type="org.assertj.core.api.SoftAssertionError"><![CDATA[org.assertj.core.api.SoftAssertionError: 
+
+The following 6 assertions failed:
+1) [numSyllables] expected:<1[65]> but was:<1[40]>
+2) [SMOG] expected:<1[7.87]f> but was:<1[4.55]f>
+3) [FK] expected:<1[7.97]f> but was:<1[4.62]f>
+4) [ARI] expected:<19.4[]f> but was:<19.4[1]f>
+5) [FRE] expected:<[18.43]f> but was:<[42.47]f>
+6) [CL] expected:<1[5.86]f> but was:<1[7.88]f>
+
+	at org.elasticsearch.ingest.TestReadabilityMetrics.testMetrics(TestReadabilityMetrics.java:72)
+]]></failure>
+    <system-out><![CDATA[========= METRICS TEST ===============
+Expected:
+TEXT:A smart city is an urban area that uses different types of electronic methods and sensors to collect data. Insights gained from that data are used to manage assets, resources and services efficiently; in return, that data is used to improve the operations across the city. This includes data collected from citizens, devices, buildings and assets that is then processed and analyzed to monitor and manage traffic and transportation systems, power plants, utilities, water supply networks, waste, crime detection, information systems, schools, libraries, hospitals, and other community services.
+Sent:3	Word:88	uniqW:0	basicW:52	polysylW:0	Syl:165	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:0
+SMOG:17.87	FK:17.97	ARI:19.4	FRE:18.43	CL:15.86	DC:11.55	
+-----------------------------------------------------------------
+
+Computed:
+TEXT:A smart city is an urban area that uses different types of electronic methods and sensors to collect data. Insights gained from that data are used to manage assets, resources and services efficiently; in return, that data is used to improve the operations across the city. This includes data collected from citizens, devices, buildings and assets that is then processed and analyzed to monitor and manage traffic and transportation systems, power plants, utilities, water supply networks, waste, crime detection, information systems, schools, libraries, hospitals, and other community services.
+Sent:3	Word:88	uniqW:59	basicW:52	polysylW:12	Syl:140	Lett:489	Char:594
+Nouns:39	Prons:0	Vbs:12	VbsPart:5	Mods:0	Adj:5	Advs:2	Preps:13	Pcts:18
+SMOG:14.554592	FK:14.622728	ARI:19.409279	FRE:42.470753	CL:17.88318	DC:11.550979	
+-----------------------------------------------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="testMetrics({txt=A city is a place where many people live closely together. City life has many benefits. Cities bring together a great variety of people from different backgrounds. They offer more jobs, more schools, and more kinds of activities than smaller towns and villages. But cities also can be dangerous and polluted. A city’s central business district, or downtown, usually has its tallest office buildings and biggest stores. The downtown area is often the oldest part of the city. A city usually has one or more areas of factories and warehouses [storage buildings] outside of downtown. Most of the city’s homes lie still farther from downtown., numSyllables=173, numSentences=9, SMOG=10.5, FK=8.4, ARI=7.68, FRE=55.6, CL=10.72, numWords=105, numBasicWords=92, DC=6.17}) [3]" classname="org.elasticsearch.ingest.TestReadabilityMetrics" time="0.041">
+    <failure message="&#10;The following 9 assertions failed:&#10;1) [numWords] expected:&lt;10[5]&gt; but was:&lt;10[7]&gt;&#10;2) [numSyllables] expected:&lt;1[73]&gt; but was:&lt;1[47]&gt;&#10;3) [numBasicWords] expected:&lt;[92]&gt; but was:&lt;[87]&gt;&#10;4) [SMOG] expected:&lt;[10.5]f&gt; but was:&lt;[7.79]f&gt;&#10;5) [FK] expected:&lt;[8.4]f&gt; but was:&lt;[5.26]f&gt;&#10;6) [ARI] expected:&lt;7.[68]f&gt; but was:&lt;7.[36]f&gt;&#10;7) [FRE] expected:&lt;[55.6]f&gt; but was:&lt;[78.54]f&gt;&#10;8) [CL] expected:&lt;1[0.72]f&gt; but was:&lt;1[5.21]f&gt;&#10;9) [DC] expected:&lt;[6.17]f&gt; but was:&lt;[7.18]f&gt;&#10;" type="org.assertj.core.api.SoftAssertionError"><![CDATA[org.assertj.core.api.SoftAssertionError: 
+
+The following 9 assertions failed:
+1) [numWords] expected:<10[5]> but was:<10[7]>
+2) [numSyllables] expected:<1[73]> but was:<1[47]>
+3) [numBasicWords] expected:<[92]> but was:<[87]>
+4) [SMOG] expected:<[10.5]f> but was:<[7.79]f>
+5) [FK] expected:<[8.4]f> but was:<[5.26]f>
+6) [ARI] expected:<7.[68]f> but was:<7.[36]f>
+7) [FRE] expected:<[55.6]f> but was:<[78.54]f>
+8) [CL] expected:<1[0.72]f> but was:<1[5.21]f>
+9) [DC] expected:<[6.17]f> but was:<[7.18]f>
+
+	at org.elasticsearch.ingest.TestReadabilityMetrics.testMetrics(TestReadabilityMetrics.java:72)
+]]></failure>
+    <system-out><![CDATA[========= METRICS TEST ===============
+Expected:
+TEXT:A city is a place where many people live closely together. City life has many benefits. Cities bring together a great variety of people from different backgrounds. They offer more jobs, more schools, and more kinds of activities than smaller towns and villages. But cities also can be dangerous and polluted. A city’s central business district, or downtown, usually has its tallest office buildings and biggest stores. The downtown area is often the oldest part of the city. A city usually has one or more areas of factories and warehouses (storage buildings) outside of downtown. Most of the city’s homes lie still farther from downtown.
+Sent:9	Word:105	uniqW:0	basicW:92	polysylW:0	Syl:173	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:0
+SMOG:10.5	FK:8.4	ARI:7.68	FRE:55.6	CL:10.72	DC:6.17	
+-----------------------------------------------------------------
+
+Computed:
+TEXT:A city is a place where many people live closely together. City life has many benefits. Cities bring together a great variety of people from different backgrounds. They offer more jobs, more schools, and more kinds of activities than smaller towns and villages. But cities also can be dangerous and polluted. A city’s central business district, or downtown, usually has its tallest office buildings and biggest stores. The downtown area is often the oldest part of the city. A city usually has one or more areas of factories and warehouses (storage buildings) outside of downtown. Most of the city’s homes lie still farther from downtown.
+Sent:9	Word:107	uniqW:66	basicW:87	polysylW:6	Syl:147	Lett:519	Char:638
+Nouns:38	Prons:2	Vbs:10	VbsPart:0	Mods:1	Adj:16	Advs:10	Preps:18	Pcts:15
+SMOG:7.7935376	FK:5.2578816	ARI:7.360145	FRE:78.54161	CL:15.210466	DC:7.177591	
+-----------------------------------------------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="testMetrics({txt=Insufficient words number here., numSentences=1, numPunctuation=1, numWords=4}) [4]" classname="org.elasticsearch.ingest.TestReadabilityMetrics" time="0.003"/>
+</testsuite>

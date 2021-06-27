@@ -261,7 +261,7 @@ public class ReadabilityMetrics {
             mr.numSyllables += auxNumSylToken;
 
             if (auxNumSylToken > 2){
-                mr.polysylWords += 1;
+                mr.numPolysylWords += 1;
             }
 
        }
@@ -292,7 +292,7 @@ public class ReadabilityMetrics {
        mr.metrics.put("CL", (float)CL);
 
        //SMOG grade - see https://en.wikipedia.org/wiki/SMOG
-       double SMOG = 1.0430 * Math.sqrt(mr.polysylWords * 30/mr.numSentences) + 3.1291;
+       double SMOG = 1.0430 * Math.sqrt(mr.numPolysylWords * 30/mr.numSentences) + 3.1291;
        mr.metrics.put("SMOG", (float)SMOG);
  
        //Flesch reading ease score - see https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests#Flesch_reading_ease
@@ -301,6 +301,9 @@ public class ReadabilityMetrics {
 
        //Dale–Chall readability score - see https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula 
        double DC = 0.0496 * wordsPerSentence + 15.79 * ratioDifficultWords;
+       if (ratioDifficultWords >= 0.05){
+           DC += 3.6365;
+       }
        mr.metrics.put("DC", (float)DC);
  
        return mr;
@@ -314,12 +317,15 @@ public class ReadabilityMetrics {
 
         MetricsResult mrStage1 = tokenizeText(mr); 
 
-        MetricsResult mrStage2 = computeCounts(mrStage1);   
+        //require a minimum number of 5 words ro continue processing, otherwise counters remain zero and metrics is empty map
+        if (mrStage1.numWords >= 5){
 
-        MetricsResult mrStage3 = syllablesCounts(mrStage2);   
+            MetricsResult mrStage2 = computeCounts(mrStage1);   
 
-        MetricsResult mrStage4 = computeMetrics(mrStage3);   
-        System.out.println(mrStage4);      
+            MetricsResult mrStage3 = syllablesCounts(mrStage2);   
+
+            MetricsResult mrStage4 = computeMetrics(mrStage3);  
+        }    
 
         return mr;        
     }

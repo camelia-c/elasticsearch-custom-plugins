@@ -1,0 +1,75 @@
+========= METRICS TEST ===============
+Expected:
+TEXT:Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Elasticsearch is where the indexing, search, and analysis magic happens. It provides scalable search, has near real-time search, and supports multitenancy. Elasticsearch provides near real-time search and analytics for all types of data. Whether you have structured or unstructured text, numerical data, or geospatial data, Elasticsearch can efficiently store and index it in a way that supports fast searches. You can go far beyond simple data retrieval and aggregate information to discover trends and patterns in your data.
+Sent:6	Word:93	uniqW:0	basicW:55	polysylW:0	Syl:167	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:0
+SMOG:13.55	FK:11.64	ARI:12.5	FRE:39.18	CL:14.97	DC:10.85	
+-----------------------------------------------------------------
+
+Computed:
+TEXT:Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Elasticsearch is where the indexing, search, and analysis magic happens. It provides scalable search, has near real-time search, and supports multitenancy. Elasticsearch provides near real-time search and analytics for all types of data. Whether you have structured or unstructured text, numerical data, or geospatial data, Elasticsearch can efficiently store and index it in a way that supports fast searches. You can go far beyond simple data retrieval and aggregate information to discover trends and patterns in your data.
+Sent:6	Word:93	uniqW:58	basicW:54	polysylW:16	Syl:147	Lett:517	Char:622
+Nouns:34	Prons:5	Vbs:11	VbsPart:2	Mods:2	Adj:9	Advs:3	Preps:19	Pcts:13
+SMOG:12.457975	FK:9.106613	ARI:12.503548	FRE:57.379917	CL:18.797419	DC:11.026913	
+-----------------------------------------------------------------
+
+========= METRICS TEST ===============
+Expected:
+TEXT:Readability is the ease with which a reader can understand a written text. In natural language, the readability of text depends on its content (the complexity of its vocabulary and syntax) and its presentation (such as typographic aspects that affect legibility, like font size, line height, character spacing, and line length).
+Sent:2	Word:51	uniqW:0	basicW:34	polysylW:0	Syl:91	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:0
+SMOG:15.9	FK:15.4	ARI:15.97	FRE:29.99	CL:13.82	DC:10.16	
+-----------------------------------------------------------------
+
+Computed:
+TEXT:Readability is the ease with which a reader can understand a written text. In natural language, the readability of text depends on its content (the complexity of its vocabulary and syntax) and its presentation (such as typographic aspects that affect legibility, like font size, line height, character spacing, and line length).
+Sent:2	Word:51	uniqW:40	basicW:33	polysylW:9	Syl:81	Lett:267	Char:328
+Nouns:22	Prons:3	Vbs:4	VbsPart:1	Mods:1	Adj:3	Advs:0	Preps:10	Pcts:11
+SMOG:15.247664	FK:13.096176	ARI:15.978236	FRE:46.587795	CL:16.144316	DC:10.474241	
+-----------------------------------------------------------------
+
+========= METRICS TEST ===============
+Expected:
+TEXT:A smart city is an urban area that uses different types of electronic methods and sensors to collect data. Insights gained from that data are used to manage assets, resources and services efficiently; in return, that data is used to improve the operations across the city. This includes data collected from citizens, devices, buildings and assets that is then processed and analyzed to monitor and manage traffic and transportation systems, power plants, utilities, water supply networks, waste, crime detection, information systems, schools, libraries, hospitals, and other community services.
+Sent:3	Word:88	uniqW:0	basicW:52	polysylW:0	Syl:165	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:0
+SMOG:17.87	FK:17.97	ARI:19.4	FRE:18.43	CL:15.86	DC:11.55	
+-----------------------------------------------------------------
+
+Computed:
+TEXT:A smart city is an urban area that uses different types of electronic methods and sensors to collect data. Insights gained from that data are used to manage assets, resources and services efficiently; in return, that data is used to improve the operations across the city. This includes data collected from citizens, devices, buildings and assets that is then processed and analyzed to monitor and manage traffic and transportation systems, power plants, utilities, water supply networks, waste, crime detection, information systems, schools, libraries, hospitals, and other community services.
+Sent:3	Word:88	uniqW:59	basicW:52	polysylW:12	Syl:140	Lett:489	Char:594
+Nouns:39	Prons:0	Vbs:12	VbsPart:5	Mods:0	Adj:5	Advs:2	Preps:13	Pcts:18
+SMOG:14.554592	FK:14.622728	ARI:19.409279	FRE:42.470753	CL:17.88318	DC:11.550979	
+-----------------------------------------------------------------
+
+========= METRICS TEST ===============
+Expected:
+TEXT:A city is a place where many people live closely together. City life has many benefits. Cities bring together a great variety of people from different backgrounds. They offer more jobs, more schools, and more kinds of activities than smaller towns and villages. But cities also can be dangerous and polluted. A city’s central business district, or downtown, usually has its tallest office buildings and biggest stores. The downtown area is often the oldest part of the city. A city usually has one or more areas of factories and warehouses (storage buildings) outside of downtown. Most of the city’s homes lie still farther from downtown.
+Sent:9	Word:105	uniqW:0	basicW:92	polysylW:0	Syl:173	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:0
+SMOG:10.5	FK:8.4	ARI:7.68	FRE:55.6	CL:10.72	DC:6.17	
+-----------------------------------------------------------------
+
+Computed:
+TEXT:A city is a place where many people live closely together. City life has many benefits. Cities bring together a great variety of people from different backgrounds. They offer more jobs, more schools, and more kinds of activities than smaller towns and villages. But cities also can be dangerous and polluted. A city’s central business district, or downtown, usually has its tallest office buildings and biggest stores. The downtown area is often the oldest part of the city. A city usually has one or more areas of factories and warehouses (storage buildings) outside of downtown. Most of the city’s homes lie still farther from downtown.
+Sent:9	Word:107	uniqW:66	basicW:87	polysylW:6	Syl:147	Lett:519	Char:638
+Nouns:38	Prons:2	Vbs:10	VbsPart:0	Mods:1	Adj:16	Advs:10	Preps:18	Pcts:15
+SMOG:7.7935376	FK:5.2578816	ARI:7.360145	FRE:78.54161	CL:15.210466	DC:7.177591	
+-----------------------------------------------------------------
+
+========= METRICS TEST ===============
+Expected:
+TEXT:Insufficient words number here.
+Sent:1	Word:4	uniqW:0	basicW:0	polysylW:0	Syl:0	Lett:0	Char:0
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:1
+
+-----------------------------------------------------------------
+
+Computed:
+TEXT:Insufficient words number here.
+Sent:1	Word:4	uniqW:0	basicW:0	polysylW:0	Syl:0	Lett:0	Char:31
+Nouns:0	Prons:0	Vbs:0	VbsPart:0	Mods:0	Adj:0	Advs:0	Preps:0	Pcts:1
+
+-----------------------------------------------------------------
+

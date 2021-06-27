@@ -1,4 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: org.elasticsearch.ingest.Test3rdParty
 -------------------------------------------------------------------------------
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 17.006 s - in org.elasticsearch.ingest.Test3rdParty
+Tests run: 22, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.96 s <<< FAILURE! - in org.elasticsearch.ingest.Test3rdParty
+testHyphenV1(real-time, 3) [7](org.elasticsearch.ingest.Test3rdParty)  Time elapsed: 0.003 s  <<< FAILURE!
+org.assertj.core.api.SoftAssertionError: 
+
+The following assertion failed:
+1) [SyllablesV1] expected:<[3]> but was:<[1]>
+
+	at org.elasticsearch.ingest.Test3rdParty.testHyphenV1(Test3rdParty.java:96)
+
+testHyphenV1(today, 2) [9](org.elasticsearch.ingest.Test3rdParty)  Time elapsed: 0.003 s  <<< FAILURE!
+org.assertj.core.api.SoftAssertionError: 
+
+The following assertion failed:
+1) [SyllablesV1] expected:<[2]> but was:<[1]>
+
+	at org.elasticsearch.ingest.Test3rdParty.testHyphenV1(Test3rdParty.java:96)
+
+testHyphenV2(Lucene, 2) [4](org.elasticsearch.ingest.Test3rdParty)  Time elapsed: 0.002 s  <<< FAILURE!
+org.assertj.core.api.SoftAssertionError: 
+
+The following assertion failed:
+1) [SyllablesV2] expected:<[2]> but was:<[1]>
+
+	at org.elasticsearch.ingest.Test3rdParty.testHyphenV2(Test3rdParty.java:139)
+

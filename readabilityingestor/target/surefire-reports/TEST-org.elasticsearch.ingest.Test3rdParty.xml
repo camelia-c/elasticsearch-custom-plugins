@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.elasticsearch.ingest.Test3rdParty" time="17.006" tests="22" errors="0" skipped="3" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.elasticsearch.ingest.Test3rdParty" time="1.96" tests="22" errors="0" skipped="0" failures="3">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -17,7 +17,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire/surefirebooter3385601981971169023.jar /home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire 2021-06-25T10-21-05_376-jvmRun1 surefire6036339827724501876tmp surefire_0453474207671615476tmp"/>
+    <property name="sun.java.command" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire/surefirebooter786078369010571747.jar /home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire 2021-06-27T12-48-29_050-jvmRun1 surefire1894606883078819513tmp surefire_0702460935217070781tmp"/>
     <property name="surefire.test.class.path" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/test-classes:/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/classes:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch/7.12.1/elasticsearch-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-core/7.12.1/elasticsearch-core-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-secure-sm/7.12.1/elasticsearch-secure-sm-7.12.1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-x-content/7.12.1/elasticsearch-x-content-7.12.1.jar:/home/camelia/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.4/jackson-core-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.10.4/jackson-dataformat-smile-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.10.4/jackson-dataformat-yaml-2.10.4.jar:/home/camelia/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.10.4/jackson-dataformat-cbor-2.10.4.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-geo/7.12.1/elasticsearch-geo-7.12.1.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-core/8.8.0/lucene-core-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-analyzers-common/8.8.0/lucene-analyzers-common-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-backward-codecs/8.8.0/lucene-backward-codecs-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-grouping/8.8.0/lucene-grouping-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-highlighter/8.8.0/lucene-highlighter-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-join/8.8.0/lucene-join-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-memory/8.8.0/lucene-memory-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-misc/8.8.0/lucene-misc-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-queries/8.8.0/lucene-queries-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-queryparser/8.8.0/lucene-queryparser-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-sandbox/8.8.0/lucene-sandbox-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-spatial-extras/8.8.0/lucene-spatial-extras-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-spatial3d/8.8.0/lucene-spatial3d-8.8.0.jar:/home/camelia/.m2/repository/org/apache/lucene/lucene-suggest/8.8.0/lucene-suggest-8.8.0.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-cli/7.12.1/elasticsearch-cli-7.12.1.jar:/home/camelia/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.2/jopt-simple-5.0.2.jar:/home/camelia/.m2/repository/com/carrotsearch/hppc/0.8.1/hppc-0.8.1.jar:/home/camelia/.m2/repository/joda-time/joda-time/2.10.4/joda-time-2.10.4.jar:/home/camelia/.m2/repository/com/tdunning/t-digest/3.2/t-digest-3.2.jar:/home/camelia/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar:/home/camelia/.m2/repository/org/elasticsearch/jna/5.7.0-1/jna-5.7.0-1.jar:/home/camelia/.m2/repository/org/elasticsearch/elasticsearch-plugin-classloader/7.12.1/elasticsearch-plugin-classloader-7.12.1.jar:/home/camelia/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.1/log4j-api-2.11.1.jar:/home/camelia/.m2/repository/edu/stanford/nlp/stanford-corenlp/4.2.2/stanford-corenlp-4.2.2.jar:/home/camelia/.m2/repository/com/apple/AppleJavaExtensions/1.4/AppleJavaExtensions-1.4.jar:/home/camelia/.m2/repository/de/jollyday/jollyday/0.4.9/jollyday-0.4.9.jar:/home/camelia/.m2/repository/org/apache/commons/commons-lang3/3.3.1/commons-lang3-3.3.1.jar:/home/camelia/.m2/repository/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar:/home/camelia/.m2/repository/xom/xom/1.3.2/xom-1.3.2.jar:/home/camelia/.m2/repository/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar:/home/camelia/.m2/repository/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar:/home/camelia/.m2/repository/xalan/xalan/2.7.0/xalan-2.7.0.jar:/home/camelia/.m2/repository/org/ejml/ejml-core/0.39/ejml-core-0.39.jar:/home/camelia/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/camelia/.m2/repository/org/ejml/ejml-ddense/0.39/ejml-ddense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-simple/0.39/ejml-simple-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-fdense/0.39/ejml-fdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-cdense/0.39/ejml-cdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-zdense/0.39/ejml-zdense-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-dsparse/0.39/ejml-dsparse-0.39.jar:/home/camelia/.m2/repository/org/ejml/ejml-fsparse/0.39/ejml-fsparse-0.39.jar:/home/camelia/.m2/repository/org/glassfish/javax.json/1.0.4/javax.json-1.0.4.jar:/home/camelia/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/camelia/.m2/repository/com/google/protobuf/protobuf-java/3.9.2/protobuf-java-3.9.2.jar:/home/camelia/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/camelia/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/camelia/.m2/repository/com/sun/xml/bind/jaxb-core/3.0.1/jaxb-core-3.0.1.jar:/home/camelia/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.1/jakarta.xml.bind-api-3.0.1.jar:/home/camelia/.m2/repository/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1.jar:/home/camelia/.m2/repository/com/sun/xml/bind/jaxb-impl/3.0.1/jaxb-impl-3.0.1.jar:/home/camelia/.m2/repository/com/itextpdf/hyph/7.1.15/hyph-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/layout/7.1.15/layout-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/kernel/7.1.15/kernel-7.1.15.jar:/home/camelia/.m2/repository/com/itextpdf/io/7.1.15/io-7.1.15.jar:/home/camelia/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.68/bcpkix-jdk15on-1.68.jar:/home/camelia/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.68/bcprov-jdk15on-1.68.jar:/home/camelia/.m2/repository/com/github/mfietz/JHyphenator/master/JHyphenator-master.jar:/home/camelia/.m2/repository/com/google/code/gson/gson/2.8.7/gson-2.8.7.jar:/home/camelia/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/camelia/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/camelia/.m2/repository/org/assertj/assertj-core/3.20.2/assertj-core-3.20.2.jar:/home/camelia/.m2/repository/pl/pragmatists/JUnitParams/1.1.1/JUnitParams-1.1.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/camelia"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire/surefirebooter3385601981971169023.jar"/>
+    <property name="surefire.real.class.path" value="/home/camelia/github_repos/es_plugins/elasticsearch-custom-plugins/readabilityingestor/target/surefire/surefirebooter786078369010571747.jar"/>
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_101-b13"/>
@@ -58,42 +58,60 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testCoreNLP(Elasticsearch is a search engine based on the Lucene library., 1, 10) [0]" classname="org.elasticsearch.ingest.Test3rdParty" time="5.711"/>
-  <testcase name="testCoreNLP(Elasticsearch can be used to search all kinds of documents. It provides scalable search, has near real-time search, and supports multitenancy., 2, 21) [1]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.069"/>
-  <testcase name="testHyphenV1(Elasticsearch, 3) [0]" classname="org.elasticsearch.ingest.Test3rdParty" time="4.357"/>
+  <testcase name="testCoreNLP(Elasticsearch is a search engine based on the Lucene library., 1, 10) [0]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
+  <testcase name="testCoreNLP(Elasticsearch can be used to search all kinds of documents. It provides scalable search, has near real-time search, and supports multitenancy., 2, 21) [1]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
+  <testcase name="testHyphenV1(Elasticsearch, 3) [0]" classname="org.elasticsearch.ingest.Test3rdParty" time="1.941"/>
   <testcase name="testHyphenV1(is, 1) [1]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
-  <testcase name="testHyphenV1(search, 1) [2]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.002"/>
-  <testcase name="testHyphenV1(engine, 2) [3]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.002"/>
+  <testcase name="testHyphenV1(search, 1) [2]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
+  <testcase name="testHyphenV1(engine, 2) [3]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
   <testcase name="testHyphenV1(Lucene, 2) [4]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
   <testcase name="testHyphenV1(library, 2) [5]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
   <testcase name="testHyphenV1(documents, 3) [6]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
-  <testcase name="testHyphenV1(real-time, 3) [7]" classname="org.elasticsearch.ingest.Test3rdParty" time="0">
-    <skipped message="got: &lt;false&gt;, expected: is &lt;true&gt;"/>
+  <testcase name="testHyphenV1(real-time, 3) [7]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.003">
+    <failure message="&#10;The following assertion failed:&#10;1) [SyllablesV1] expected:&lt;[3]&gt; but was:&lt;[1]&gt;&#10;" type="org.assertj.core.api.SoftAssertionError"><![CDATA[org.assertj.core.api.SoftAssertionError: 
+
+The following assertion failed:
+1) [SyllablesV1] expected:<[3]> but was:<[1]>
+
+	at org.elasticsearch.ingest.Test3rdParty.testHyphenV1(Test3rdParty.java:96)
+]]></failure>
     <system-out><![CDATA[========= HYPHEN TEST ITEXT7 ===============
 real-time	real-time	1
 ]]></system-out>
   </testcase>
   <testcase name="testHyphenV1(multitenancy, 4) [8]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
-  <testcase name="testHyphenV1(today, 2) [9]" classname="org.elasticsearch.ingest.Test3rdParty" time="0">
-    <skipped message="got: &lt;false&gt;, expected: is &lt;true&gt;"/>
+  <testcase name="testHyphenV1(today, 2) [9]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.003">
+    <failure message="&#10;The following assertion failed:&#10;1) [SyllablesV1] expected:&lt;[2]&gt; but was:&lt;[1]&gt;&#10;" type="org.assertj.core.api.SoftAssertionError"><![CDATA[org.assertj.core.api.SoftAssertionError: 
+
+The following assertion failed:
+1) [SyllablesV1] expected:<[2]> but was:<[1]>
+
+	at org.elasticsearch.ingest.Test3rdParty.testHyphenV1(Test3rdParty.java:96)
+]]></failure>
     <system-out><![CDATA[========= HYPHEN TEST ITEXT7 ===============
 Catched exception:   java.lang.NullPointerException
 today	n/a	1
 ]]></system-out>
   </testcase>
-  <testcase name="testHyphenV2(Elasticsearch, 3) [0]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
-  <testcase name="testHyphenV2(is, 1) [1]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
+  <testcase name="testHyphenV2(Elasticsearch, 3) [0]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
+  <testcase name="testHyphenV2(is, 1) [1]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
   <testcase name="testHyphenV2(search, 1) [2]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
   <testcase name="testHyphenV2(engine, 2) [3]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
-  <testcase name="testHyphenV2(Lucene, 2) [4]" classname="org.elasticsearch.ingest.Test3rdParty" time="0">
-    <skipped message="got: &lt;false&gt;, expected: is &lt;true&gt;"/>
+  <testcase name="testHyphenV2(Lucene, 2) [4]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.002">
+    <failure message="&#10;The following assertion failed:&#10;1) [SyllablesV2] expected:&lt;[2]&gt; but was:&lt;[1]&gt;&#10;" type="org.assertj.core.api.SoftAssertionError"><![CDATA[org.assertj.core.api.SoftAssertionError: 
+
+The following assertion failed:
+1) [SyllablesV2] expected:<[2]> but was:<[1]>
+
+	at org.elasticsearch.ingest.Test3rdParty.testHyphenV2(Test3rdParty.java:139)
+]]></failure>
     <system-out><![CDATA[========= HYPHEN TEST JHYPHENATOR ===============
 Lucene	Lucene	1
 ]]></system-out>
   </testcase>
-  <testcase name="testHyphenV2(library, 2) [5]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
+  <testcase name="testHyphenV2(library, 2) [5]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
   <testcase name="testHyphenV2(documents, 3) [6]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
-  <testcase name="testHyphenV2(real-time, 3) [7]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
-  <testcase name="testHyphenV2(multitenancy, 4) [8]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
-  <testcase name="testHyphenV2(today, 2) [9]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
+  <testcase name="testHyphenV2(real-time, 3) [7]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
+  <testcase name="testHyphenV2(multitenancy, 4) [8]" classname="org.elasticsearch.ingest.Test3rdParty" time="0.001"/>
+  <testcase name="testHyphenV2(today, 2) [9]" classname="org.elasticsearch.ingest.Test3rdParty" time="0"/>
 </testsuite>
